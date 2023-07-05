@@ -1,6 +1,6 @@
 <?php
 include_once('header.php');
-if (isset($_SESSION['auth'])){
+if (isset($_SESSION['jwt'])){
 	?>
 <style type="text/css">
 	.main-container
@@ -193,7 +193,7 @@ button.cancel_service{
 				    <tbody>
 				       <?php
                          for ($t=0; $t <count($transactions) ; $t++) { 
-                         	if ($transactions[$t]['mid']==$_SESSION['auth']) {
+                         	if ($transactions[$t]['mid']==$_SESSION['jwt']) {
                          		
 				       ?>
 				      <tr>
@@ -239,7 +239,7 @@ button.cancel_service{
           <div id="accordion">
 				       <?php
                          for ($b=count($bookings)-1; $b >=0 ; $b--) { 
-                         	if ($bookings[$b]['mid']==$_SESSION['auth']) {
+                         	if ($bookings[$b]['mid']==$_SESSION['jwt']) {
                          		
 				       ?>			     
 
@@ -367,7 +367,7 @@ button.cancel_service{
 		if (wamount=="") {
 			$(".err").text('Enter Amount ');
 		}else{
-			add_wallet('<?php echo $_SESSION["auth"]; ?>', wamount,'<?php echo $profile[0]["name"];?>', '<?php echo $profile[0]["mobile"];?>','Add To Wallet','wallet');
+			add_wallet('<?php echo $_SESSION["jwt"]; ?>', wamount,'<?php echo $profile[0]["name"];?>', '<?php echo $profile[0]["mobile"];?>','Add To Wallet','wallet');
 		}
 
 	});
@@ -388,7 +388,7 @@ button.cancel_service{
 			  loadExternalScript('https://checkout.razorpay.com/v1/checkout.js').then(function() { 
 			    var options = {
 
-			      key: 'rzp_live_OGeCVaU4dUBYAD',
+			      key: 'rzp_test_stfYN9mYkreg1U',
 			      protocol: 'https',
 			      hostname: 'api.razorpay.com',
 			      amount: amount*100,
@@ -405,11 +405,11 @@ button.cancel_service{
 			      },
 			      handler: function (transaction, response){
 			      	var ti=transaction.razorpay_payment_id;
-			        // console.log('transaction id: ' + transaction.razorpay_payment_id);
-			        // console.log('memberid:'+itemId);
-			        // console.log('name:'+name);
-			        // console.log('mobile:'+mobile);
-			        // console.log('amount:'+amount);
+			        console.log('transaction id: ' + transaction.razorpay_payment_id);
+			        console.log('memberid:'+itemId);
+			        console.log('name:'+name);
+			        console.log('mobile:'+mobile);
+			        console.log('amount:'+amount);
 			        $.post('add_wallet.php',{ti,itemId,name,mobile,amount},function(data){
 			            $('#show_wallet').html('&#8377;'+data);
 			        });
@@ -418,10 +418,10 @@ button.cancel_service{
 			    };
 
 			    window.rzpay = new Razorpay(options);
-			   //       console.log('name:'+name);
-					 // console.log('name:'+name);
-			   //      console.log('mobile:'+mobile);
-			   //      console.log('amount:'+amount);
+			         console.log('name:'+name);
+					 console.log('name:'+name);
+			         console.log('mobile:'+mobile);
+			         console.log('amount:'+amount);
 			    
 
 			    rzpay.open();

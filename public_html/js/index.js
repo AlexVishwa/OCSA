@@ -158,14 +158,14 @@ var modal = document.getElementById('id01');
 // registration form
 $("button.registernow").on('click',function(e){
     e.preventDefault();
-        var name=$("#membername").val();
+         var name=$("#membername").val();
          var email=$("#email").val();
          var mobile=$("#mobile").val();
          var password=$("#password").val();
          var city=$("#city").val();
          var pincode=$("#pincode").val();
          var address=$("#fulladdress").val();
-          var referral=$("#referral").val();
+         var referral=$("#referral").val();
          var appliance = []; 
          var quantity = []; 
         $('select[name^=appliance]').each(function(){
@@ -196,9 +196,23 @@ $("button.registernow").on('click',function(e){
              
             //modal.style.display = "block";
             $('.loader').attr('style','display:flex !important');
+            //Emal otp generated
+/*
+            <?php
+            $possible=array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m','1','2','3','4','5','6','7','8','9');
+            $randomotp='';
+            for($i=0;$i<4;$i++)
+            {    
+            $randomotp= $randomotp.$possible[rand(0,41)];
+            }
+            mail(email,'OCSA Site Registration','Otp is'.$randomotp);
+            ?>
+            */
             
             $.post('mobile_registration.php',{mobile,email},function(data){
+                var modal = document.getElementById('id01');        
                 modal.style.display = "block";
+                
                 $('.content').html(data);
                 $('.loader').attr('style','display:none !important');
         
@@ -207,18 +221,20 @@ $("button.registernow").on('click',function(e){
                     var otp_get=$("#otp_get").val();
                     if (otp==otp_get){
                         $("p#verifymsg").html('<span style="color:green;font-size:12px">Mobile number Successfully Verified..</span>');
-                        $.post('submit_member_details.php',{name,email,mobile,password,city,pincode,address,appliance,quantity,referral},function(callback){
+                        $.post('submit_member_details.php',{name,email,mobile,password,city,pincode,address,appliance,quantity},function(callback){
                            console.log(callback); 
                            modal.style.display = "none";
                            swal("Your Registration Successfully Done !");
-                           
+                           window.location.href="http://localhost/serv/public_html/index.php";
                         });
                     }else{
                         $("p#verifymsg").html('<span  style="color:red;font-size:12px">Invalid OTP</span>');
                     }
                    
                 });
+                
             });
+                
         }
 });
 
@@ -234,10 +250,18 @@ $('button#mlogin').on('click',function(e){
     $('.preloader').fadeIn();
     $(this).text('Logging...');
     $.post('member_auth.php',{mobile,pwd},function(data){
-        console.log(data);
-        if (parseInt(data)==1){
+        //console.log(data);
+        
+        //res=JSON.parse(data[0]);
+        //console.log(res);
+        if (data.data[0].tog==1){
+          //  <?php
+        //array_push($_SESSION['profile'],$res);
+        //?>
           window.location.href='index.php';
-        }else if(parseInt(data)==2){
+        
+        }else if(data.data[0].tog==2){
+          //      array_push($_SESSION['profile'],$res);
                $('.preloader').fadeOut();
                 swal({
                 title: "Please Pay Registration Fee",
@@ -259,6 +283,7 @@ $('button#mlogin').on('click',function(e){
           swal('Invalid Username Or Password !');
           $('#mlogin').text('LOGIN');
         }
+        
     });
 
 
@@ -266,6 +291,41 @@ $('button#mlogin').on('click',function(e){
 
 });
 
+// shopkeeper login function
+$('button#slogin').on('click',function(e){
+  e.preventDefault();
+  var mobile=$("#mobile").val();
+  var pwd=$("#pwd").val();
+  if (mobile == "" || pwd=="") {
+    swal('Enter Username Or Password !');
+  }else{
+    $('.preloader').fadeIn();
+    $(this).text('Logging...');
+    $.post('member_auth.php',{mobile,pwd},function(data){
+        //console.log(data);
+        
+        //res=JSON.parse(data[0]);
+        //console.log(res);
+        if (data.data[0].tog==1){
+          //  <?php
+        //array_push($_SESSION['profile'],$res);
+        //?>
+          window.location.href='index.php';
+        
+        }else if(data.data[0].tog==2){
+          //      array_push($_SESSION['profile'],$res);
+        }else{
+          $('.preloader').fadeOut();
+          swal('Invalid Username Or Password !');
+          $('#mlogin').text('LOGIN');
+        }
+        
+    });
+
+
+  }
+
+});
 
 //payment function
 var callRazorPayScript = function(amount,mobile,description,type) {
@@ -476,13 +536,15 @@ $(document).on('submit','#submitshop',function(e){
             success: function(data)
                 {
                     console.log(data);
+                    //var z=JSON.parse(data);
                     $("button#submit").text('SUBMIT');
-                    if (parseInt(data) == 1){                            
-                        window.location.href="thankyou.php?m="+mobile;
+                    if (data.data[0].tog == 1){                            
+                        window.location.href="http://localhost/serv/public_html/thankyou.php?m="+mobile;
                         // $("div.preloader-all").fadeOut();
                         // swal("Your Registration Successfully Done !");
 
                      }else{
+                        //window.location.href="thankyou.php?m="+mobile;
                         swal("User Already Registered !");
                      }
                 }
@@ -514,12 +576,12 @@ $(document).on('submit','#submitpartner',function(e){
             },
             success: function(data)
                 {
-                    //console.log(data);
+                    console.log(data);
                     $("button#submit").text('SUBMIT');
-                    if (parseInt(data) == 1){                            
+                    if (data.data[0].tog == 1){                            
                         //$("div.preloader-all").fadeOut();
                         swal("Your Registration Successfully Done !");
-
+                        window.location.href="index.php";
                      }else{
                         swal("User Already Registered !");
                      }

@@ -46,10 +46,18 @@
 </head>
   <body>
       <div class="container-fluid">
-            <h4>Partners Registration form</h4>
-            <!-- personal details -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Partners Registration form</h1>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item active"><a href="./">Personal Details</a></li>
+              <li class="breadcrumb-item">Shop/Store Details</li>
+              <li class="breadcrumb-item" aria-current="page">Timing and Partner Type</li>
+              <li class="breadcrumb-item" aria-current="page">Bank Details</li>
+              <li class="breadcrumb-item" aria-current="page">Upload KYC Documents</li>
+            </ol>
+            </div>
         <form action="submitpartner.php" id="submitpartner" method="post" enctype="multipart/form-data">
-            <div class="container section">
+            <div class="container section" id="personaldetails">
                 <h5>Personal Details</h5>
                 <div class="wraper row">
                     <div class="inputs col-md-4 col-sm-6 col-xs-12">
@@ -90,11 +98,13 @@
                     <div class="inputs col-md-12 col-sm-12 col-xs-12">
                         <textarea class="form-control" placeholder="Full Address" name="address" id="address"></textarea>
                     </div>
-
+                    <div class="inputs col-md-12 col-sm-12 col-xs-12">
+                       <button id="personaldetnext" type="button" style="float: right;">NEXT</button>
+                    </div>
                 </div>
             </div>
             <!-- shop details -->
-            <div class="container section">
+            <div class="container section" id="storedetails">
                 <h5>Shop/Store Details</h5>
                 <div class="wraper row">
                     <div class="inputs col-md-4 col-sm-6 col-xs-12">
@@ -121,11 +131,16 @@
                     <div class="inputs col-md-12 col-sm-12 col-xs-12">
                         <textarea class="form-control" placeholder="Shop/Store Full Address" name="shopaddress" id="shopaddress"></textarea>
                     </div>
-
+                    <div class="inputs col-md-6 col-sm-6 col-xs-6">
+                       <button id="storedetailsprev" type="button">PREVIOUS</button>
+                    </div>
+                    <div class="inputs col-md-6 col-sm-6 col-xs-6">
+                       <button id="storedetailsnext" type="button">NEXT</button>
+                    </div>
                 </div>
             </div>
-              <!-- shop details -->
-            <div class="container section">
+              <!-- Timing details -->
+            <div class="container section" id="timings">
                 <h5>Timing and Partner Type</h5>
                 <div class="wraper row">
                     
@@ -145,12 +160,17 @@
                         <label>End Time</label>
                         <input type="time" name="timeto" id="timeto" class="form-control" placeholder="Time To" value="End Time">
                     </div>
-                   
+                    <div class="inputs col-md-6 col-sm-6 col-xs-6">
+                       <button id="timingprev" type="button">PREVIOUS</button>
+                    </div>
+                    <div class="inputs col-md-6 col-sm-6 col-xs-6">
+                       <button id="timingnext" type="button">NEXT</button>
+                    </div>
 
                 </div>
             </div>
             <!-- bank details  -->
-            <div class="container section">
+            <div class="container section" id="bankdetails">
                 <h5>Bank Details</h5>
                 <div class="wraper row">
                     <div class="inputs col-md-4 col-sm-6 col-xs-12">
@@ -178,12 +198,17 @@
                     <div class="inputs col-md-4 col-sm-6 col-xs-12">
                         <input type="text" name="bankstate" id="bankstate" class="form-control" placeholder="State" required="required" readonly="readonly">
                     </div>
-                    
 
+                    <div class="inputs col-md-6 col-sm-6 col-xs-6">
+                       <button id="bankdetailsprev" type="button">PREVIOUS</button>
+                    </div>
+                    <div class="inputs col-md-6 col-sm-6 col-xs-6">
+                       <button id="bankdetailsnext" type="button">NEXT</button>
+                    </div>
                 </div>
             </div>
             <!-- kyc documents -->
-            <div class="container section">
+            <div class="container section" id="kycdocs">
                 <h5>UPLOAD KYC DOCUMENTS</h5>
                 <div class="wrapper row">
                     <div class="inputs col-md-4 col-sm-6 col-xs-12">
@@ -194,14 +219,82 @@
                         <label>PAN CARD</label>
                         <input type="file" name="pancardfile" id="aadharcardfile" class="form-control" required="required">
                     </div>
-                    <div class="inputs col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="inputs col-md-6 col-sm-6 col-xs-6">
+                       <button id="kycdocsprev" type="button">PREVIOUS</button>
+                    </div>
+                    <div class="inputs col-md-6 col-sm-6 col-xs-6">
                        <button id="submit" type="submit">SUBMIT</button>
                     </div>
+
                 </div>
             </div>
             </form>
       </div>
-      
+     
+   <script type="text/javascript">
+       $("#bankdetails").hide();
+       $("#kycdocs").hide();
+       $("#storedetails").hide();
+       $("#timings").hide();
+        $("#storedetailsprev").click(function(){
+                $("#personaldetails").show();
+                $("#bankdetails").hide();
+               $("#kycdocs").hide();
+               $("#storedetails").hide();
+               $("#timings").hide();        
+            });
+
+        $("#timingprev").click(function(){
+            $("#personaldetails").hide();
+                $("#bankdetails").hide();
+               $("#kycdocs").hide();
+               $("#storedetails").show();
+               $("#timings").hide();
+        })
+        $("#bankdetailsprev").click(function(){
+                $("#personaldetails").hide();
+                $("#bankdetails").hide();
+               $("#kycdocs").hide();
+               $("#storedetails").hide();
+               $("#timings").show();        
+            });
+        $("#kycdocsprev").click(function(){
+                $("#personaldetails").hide();
+                $("#bankdetails").show();
+               $("#kycdocs").hide();
+               $("#storedetails").hide();
+               $("#timings").hide();        
+            });
+        $("#personaldetnext").click(function(){
+                $("#personaldetails").hide();
+                $("#bankdetails").hide();
+               $("#kycdocs").hide();
+               $("#storedetails").show();
+               $("#timings").hide();        
+            });
+        $("#storedetailsnext").click(function(){
+                $("#personaldetails").hide();
+                $("#bankdetails").show();
+               $("#kycdocs").hide();
+               $("#storedetails").hide();
+               $("#timings").show();        
+            });
+        $("#timingnext").click(function(){
+            $("#personaldetails").hide();
+                $("#bankdetails").show();
+               $("#kycdocs").hide();
+               $("#storedetails").hide();
+               $("#timings").hide();
+           });
+        $("#bankdetailsnext").click(function(){
+                $("#personaldetails").hide();
+                $("#bankdetails").hide();
+               $("#kycdocs").show();
+               $("#storedetails").hide();
+               $("#timings").hide();        
+            });
+   </script> 
    <?php
    include_once('footer.php');
    ?>

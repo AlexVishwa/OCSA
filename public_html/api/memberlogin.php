@@ -1,7 +1,10 @@
 <?php
-//$php_post = json_decode(file_get_contents('php://input'), true);
-$users = json_decode(file_get_contents('../database/partners.json'), true);
-
+require('../database/connect.php');
+if (!$conn) {
+    die("Connection failed: " . $conn->connect_error());
+}
+$sql= "select * from member";
+$members= $conn->query($sql);
 $arr=array();
 
 $arr['status']='false';
@@ -13,7 +16,7 @@ for($i=0;$i<count($users);$i++){
         $arr['pass']=$users[$i]['password'];
         $arr['id']=$users[$i]['id'];
         $arr['name']=$users[$i]['name'];
-        $arr['type']=$users[$i]['partnertype'];
+        $arr['type']=$users[$i]['type'];
         
     }
 }

@@ -209,7 +209,7 @@
 	content: '';
 	position: absolute;
 	display: block;
-	background: #aa0000;
+	background: #ffcc00;
 	width:50px;
 	height:15px;
 	bottom: 0;
@@ -230,7 +230,7 @@
 	width: 5em;
 	background: none;
 	border-style: solid;
-	border-color: #aa0000;
+	border-color: #ffcc00;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
@@ -273,7 +273,7 @@
     height: 6em;
 	border-style:solid;
 	border-width:0 15px;
-	border-color: #aa0000;	
+	border-color: #ffcc00;	
 }
 #wowslider-container1 .ws_pause:hover {
 	width: 2em;
@@ -284,7 +284,7 @@
     height: 5em;
     border-style:solid;
 	border-width: 15px 15px 0 0;
-	border-color: #aa0000;
+	border-color: #ffcc00;
 }
 #wowslider-container1 .ws_play:hover {
 	border-width: 3px 3px 0 0;
@@ -292,7 +292,7 @@
 
 /* fullscreen button */
 #wowslider-container1 .ws_fullscreen {
-	color: #aa0000;
+	color: #ffcc00;
 	right: 3.3em;
 	top: 0;
 }/* bottom center */
@@ -315,7 +315,7 @@
 	display:inline-block;
 	padding: 0.5em;
 	text-transform: uppercase;
-	background: #aa0000;
+	background: #ffcc00;
 }
 #wowslider-container1 .ws-title div{
 	display:block;
@@ -340,7 +340,7 @@
 	left:-70px;
 	visibility:hidden;
 	position:absolute;
-    border: 1px solid #aa0000;
+    border: 1px solid #ffcc00;
 	max-width:none;
 }
 #wowslider-container1 .ws_bullets a:hover img{
@@ -357,7 +357,7 @@
 	overflow:hidden;
 	position:relative;
 	width:140px;
-	background-color:#aa0000;
+	background-color:#ffcc00;
 }
 #wowslider-container1  .ws_bullets .ws_bulframe{
 	display:none;
@@ -366,7 +366,7 @@
 	overflow:visible;
 	position:absolute;
 	cursor:pointer;
-    border: 15px solid #aa0000;
+    border: 15px solid #ffcc00;
 }#wowslider-container1 .ws_bulframe div div{
 	height: auto;
 }

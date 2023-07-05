@@ -2,12 +2,12 @@
 include_once('header.php');
 $servicecharge=0;
 $book=[];
-for ($i=0; $i <count($services); $i++) { 
-	if ($services[$i]['id']==$_GET['id']) {
+for ($i=0; $i <count($services2); $i++) { 
+	if ($services2[$i]['id']==$_GET['id']) {
 		array_push($book, $services[$i]);
 	}
 }
-if (!isset($_SESSION['auth'])) {
+if (!isset($_SESSION['jwt'])) {
 	echo '<script>window.location.href="member-login.php"</script>';
 }
 

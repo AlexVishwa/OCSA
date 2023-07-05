@@ -1,6 +1,13 @@
 <?php
 include_once('header.php');
-
+        include_once("qrcode.php");
+        // Create object
+        $qc = new QRCODE();
+        // Create Text Code
+        $qc->URL("https://www.gstatic.com/charts/loader.js");
+        // Save QR Code
+        $qc->QRCODE(250,"images/$_GET[m]OcsaQR.png");
+        echo $_GET[m];
 ?>
 <div class="container" style="height: 60vh;
     display: flex;

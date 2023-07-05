@@ -1,12 +1,13 @@
+
 <?php
 include_once('header.php');
 ?>
 <style type="text/css">
  input, textarea, select {
-    border: 0.1px solid #aa0000 !important;
+    border: 0.1px solid yellow !important;
     margin: 4px 0px;
     border-radius: 0px !important;
-    color: #aa0000 !important;
+    color: black !important;
 }
 </style>
 <div class="container-fluid registration-form" style="background: #ffffff94;">
@@ -14,7 +15,15 @@ include_once('header.php');
     <h3 align="center" style="padding-top: 20px;color: #aa0000;font-weight: bold;font-size: 25px;">Member Registration Form</h3>
     <hr style="border-bottom: 0.1px solid #aa0000;">
     <h5 align="center" id="msg"></h5>
-     <form action="submit_details.php" method="post" id="registration_form">
+     <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Member Reg. Page.</h1>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item"><a href="/member-registration.php">Login</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Member Login</li>
+            </ol>
+    </div>
+     <form method="post" id="registration_form">
      <div class="row">
            <div class="input-wrape col-md-6">
              <input type="text" name="referral" id="referral" placeholder="Referral number" class="form-control" >
@@ -89,9 +98,6 @@ include_once('header.php');
                                   <option value="9">9</option>
                                   <option value="10">10</option>
                                 </select>
-                                
-                       
-                       
                            <a class="btn btn-success" id="add_row" style="color: #fff;background: linear-gradient(45deg, #28a745, #007c1c);border-radius: 0px;border: none;padding: 6px 15px;">+</a>
                         </div>
                        
@@ -116,10 +122,10 @@ include_once('header.php');
 </div>
 
 
-<!-- veify otp -->
+<!-- verify otp -->
 <div id="id01" class="modal1">
   
-  <div class="modal-content1 animate" action="/action_page.php">
+  <div class="modal-content1 animate">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       

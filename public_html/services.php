@@ -3,21 +3,19 @@
     <h1 id="services_heading">Our Services</h1>
     <h3 class="services_title">Home Appliances</h3>
     <div id="services-box">
-        <?php 
-        for($i=0;$i<count($services);$i++){
+        <?php
+        for($i=0;$i<count($services2);$i++){
         ?>
-        <a href="booking.php?id=<?php echo $services[$i]['id']; ?>" id="wrapper" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
+        <a href="booking.php?id=<?php echo $services2[$i]['id']; ?>" id="wrapper">
             <div id="img">
-                <img src="<?php echo $services[$i]['img']; ?>" alt="">
+                <img src="<?php echo $services2[$i]['img']; ?>" alt="">
             </div>
             <div id="title">
               <p>
-                <!-- <span class="text-success" style="font-size: 20px;font-weight: 900;">&#8377; <?php //echo $services[$i]['offer']; ?></span>
-                <span class="text-danger" style="text-decoration: line-through;padding: 0px 0px 0px 5px;">&#8377; <?php //echo $services[$i]['price']; ?></span> -->
+                <span class="text-success" style="font-size: 20px;font-weight: 900;">&#8377; <?php echo $services2[$i]['offer']; ?></span>
+                <span class="text-danger" style="text-decoration: line-through;padding: 0px 0px 0px 5px;">&#8377; <?php echo $services2[$i]['price']; ?></span>
               </p>
-              <span style="color:#0e6aa2;font-weight: bold;font-size: 13px;"><?php echo $services[$i]['title']; ?><span>
+              <span style="color:#0e6aa2;font-weight: bold;font-size: 13px;"><?php echo $services2[$i]['title']; ?><span>
                 
               </div>
         </a>
@@ -27,13 +25,13 @@
   </div>
 <!-- services box end here -->
 <!-- beauty Packages bills -->
-<!-- <div class="container service beauty_package">
+<div class="container service beauty_package">
     <h3 class="services_title">Beauty Packages</h3>
     <div class="p-10">
         <h1>Coming Soon</h1>
     </div>
     
-</div> -->
+</div>
 <!-- beauty Packages bills end-->
 <!-- recharge and pay bills -->
 <div class="container service recharge_bills">

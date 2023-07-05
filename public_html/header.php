@@ -1,14 +1,42 @@
 <?php
 session_start();
-include_once('database/connection.php');
-if (isset($_SESSION['auth'])){
+include_once('../vendor/autoload.php');
+include_once('database/secret.php');
+$services=file_get_contents("database/services.json");
+$services2=json_decode($services,true);
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
+//print_r($_SESSION['profile']['data']);
+
+if(isset($_SESSION['jwt']))
+{
+  $jwt=$_SESSION['jwt'];
   $profile=[];
-  for ($m=0; $m <count($members) ; $m++) { 
-    if ($members[$m]['id']==$_SESSION['auth']) {
-      array_push($profile, $members[$m]);
-    }
+  array_push($profile, $_SESSION['profile']['data'][0]);
+
+  /*
+  $decoded = JWT::decode($jwt, new Key($key, 'HS256')); 
+  echo $decoded;  
+  if ($_SESSION['jwt']=$decoded) {
+    
   }
+  */
 }
+
+/*
+if (isset($_SESSION['aut'])){
+  //$decoded = JWT::decode($jwt, new Key($key, 'HS256'));   
+  if ($_SESSION['jwt']==$decoded) {
+    $sql="Select * from member where id='$_SESSION['profile']';";
+    $res=$conn->query($sql);
+    array_push($profile, $res);
+}
+}
+else{
+  echo "No tokem, autentication denied";
+}
+*/
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +46,7 @@ if (isset($_SESSION['auth'])){
   <link rel="shortcut icon" type="image/x-icon" href="images/logo1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/shop.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -72,7 +101,7 @@ if(!isset($_GET['app'])){
             </li>
             <li><a href="career.php">Career</a></li>
             <li>
-                <a href="#">Services </a>
+                <a href="#"><?=$alex;?>Services </a>
                 <ul class="submenu animated fadeInRight">
                     <li><a href="our-service.php">Electrical & Electronics</a></li>
                     <li><a href="shopkeeper.php">Shopkeeper</a></li>
@@ -82,7 +111,7 @@ if(!isset($_GET['app'])){
             </li>
             <li><a href="contact.php">Contact</a></li>
             <?php
-              if (isset($_SESSION['auth'])){
+              if (isset($_SESSION['jwt'])){
                 ?>
 
 
@@ -132,7 +161,7 @@ if(!isset($_GET['app'])){
  ?>
 <!-- side membership button end -->
 <?php
- if (isset($_SESSION['auth']))
+ if (isset($_SESSION['jwt']))
  {
    ?>
     <a href="member-dashboard.php" style="position: fixed;
@@ -196,7 +225,7 @@ if(!isset($_GET['app'])){
             </li>
             <li><a href="contact.php">Contact</a></li>
             <?php
-              if (isset($_SESSION['auth'])) {
+              if (isset($_SESSION['jwt'])) {
                 ?>
                  <li class="dropdown"><a href="#" style="color:white;font-weight: bold;font-size: 10px;background:green;padding: 2px 4px;"><?php echo $profile[0]['name']; ?></a>
                   <ul class="submenu animated fadeInRight">

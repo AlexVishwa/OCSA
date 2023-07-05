@@ -1,7 +1,7 @@
 [
 {
 	"id":1,
-	"img":"images/ac.png",
+	"img":"./images/ac.png",
 	"options":[
       {
       	"service_type":"Installation",
@@ -82,7 +82,7 @@
 },
 {
 	"id":2,
-	"img":"images/sound_system.png",
+	"img":"./images/sound_system.png",
 	"options":[
       {
          "service_type":"REPAIR",
@@ -107,14 +107,14 @@
 },
 {
 	"id":3,
-	"img":"images/mobile.png",
+	"img":"./images/mobile.png",
 	"options":[],
 	"title":"Mobile "
     
 },
 {
 	"id":4,
-	"img":"images/cooler.png",
+	"img":"./images/cooler.png",
 	"options":[
        {
             "service_type":"REPAIR/",
@@ -166,7 +166,7 @@
 },
 {
 	"id":5,
-	"img":"images/fan.png",
+	"img":"./images/fan.png",
 	"options":[
       {
             "service_type":"REPAIRING",
@@ -214,14 +214,14 @@
 },
 {
 	"id":6,
-	"img":"images/ipad.png",
+	"img":"./images/ipad.png",
 	"options":[ ],
 	"title":"Iphone/Mac "
     
 },
 {
 	"id":7,
-	"img":"images/inverter.png",
+	"img":"./images/inverter.png",
 	"options":[ 
       {
             "service_type":"",
@@ -268,7 +268,7 @@
 },
 {
 	"id":8,
-	"img":"images/chimney.png",
+	"img":"./images/chimney.png",
 	"options":[
       {
             "service_type":"INSTALLATION",
@@ -309,7 +309,7 @@
 },
 {
 	"id":9,
-	"img":"images/refrigerator.png",
+	"img":"./images/refrigerator.png",
 	"options":[
       {
             "service_type":"SERVICE/REPAIR",
@@ -362,7 +362,7 @@
 },
 {
 	"id":10,
-	"img":"images/mixi.png",
+	"img":"./images/mixi.png",
 	"options":[
       {
             "service_type":"REPAIRING",
@@ -380,7 +380,7 @@
 },
 {
 	"id":11,
-	"img":"images/iron.png",
+	"img":"./images/iron.png",
 	"options":[
       {
             "service_type":"REPAIRING",
@@ -410,14 +410,14 @@
 },
 {
 	"id":12,
-	"img":"images/laptop.png",
+	"img":"./images/laptop.png",
 	"options":[ ],
 	"title":"Laptop/Computer "
     
 },
 {
 	"id":13,
-	"img":"images/microwave.png",
+	"img":"./images/microwave.png",
 	"options":[
       {
             "service_type":"SERVICE/REPAIR",
@@ -451,7 +451,7 @@
 },
 {
 	"id":14,
-	"img":"images/ro.png",
+	"img":"./images/ro.png",
 	"options":[
       {
             "service_type":"INSTALLATION/FITTING",
@@ -495,14 +495,14 @@
 },
 {
 	"id":15,
-	"img":"images/gas.png",
+	"img":"./images/gas.png",
 	"options":[ ],
 	"title":"Gas Stove(Chulha) "
     
 },
 {
 	"id":16,
-	"img":"images/washing.png",
+	"img":"./images/washing.png",
 	"options":[
       {
             "service_type":"Installation/Unistallation",
@@ -552,7 +552,7 @@
 },
 {
 	"id":17,
-	"img":"images/gyser.png",
+	"img":"./images/gyser.png",
 	"options":[
       {
             "service_type":"Installation/Unistallation",
@@ -614,7 +614,7 @@
 },
 {
 	"id":18,
-	"img":"images/repair.png",
+	"img":"./images/repair.png",
 	"options":[
       {
             "service_type":"REPAIR",

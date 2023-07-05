@@ -34,21 +34,21 @@
   <div class="ws_images">
         <ul>
           <li>
-            <img src="images/slider/s1.jpg" alt="Refer and Earn" title="Refer a friend & Earn UpTo Rs. 100" id="wows1_0"/>
+            <img src="images/service5.jpg" alt="Refer and Earn" title="Refer a friend & Earn UpTo Rs. 100" id="wows1_0"/>
           </li>
           <li><a href="http://wowslider.net">
             <img src="data1/images/img2.jpg" alt="" title="OCSA Pvt. Ltd." id="wows1_1"/></a>
           </li>
           <li>
-            <img src="data1/images/s1.jpg" alt="OCSA ENGINEER" title="OCSA ENGINEER" id="wows1_2"/>
+            <img src="images/services.jpeg" alt="OCSA ENGINEER" title="OCSA ENGINEER" id="wows1_2"/>
           </li>
       </ul>
   </div>
   <div class="ws_bullets">
     <div>
-      <a href="#" title="img1"><span><img src="data1/tooltips/img1.jpg" alt="img1"/>1</span></a>
-      <a href="#" title="img2"><span><img src="data1/tooltips/img2.jpg" alt="img2"/>2</span></a>
-      <a href="#" title="s1"><span><img src="data1/tooltips/s1.jpg" alt="s1"/>3</span></a>
+      <a href="#" title="img1"><span><img src="data1/tooltips/services.jpg" alt="img1"/>1</span></a>
+      <a href="#" title="img2"><span><img src="data1/tooltips/service2.jpg" alt="img2"/>2</span></a>
+      <a href="#" title="s1"><span><img src="data1/tooltips/service3.jpg" alt="s1"/>3</span></a>
     </div>
     </div>
 

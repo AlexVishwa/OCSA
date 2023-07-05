@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,16 +72,14 @@
              <input type="text" name="state" id="state" placeholder="state" class="form-control" required >
            </div>
            <div class="input-wrape col-md-6">
-             <input type="text" name="country" id="country" placeholder="country" class="form-control" required >
+            <select name="country1" class="form-control">
+              <option name="country" value="India" id="country" placeholder="country" selected>India</option>
+            </select>
            </div>
-          <!--  <div class="input-wrape col-md-6">
-             <input type="text" name="city" id="city" placeholder="city" class="form-control" required >
-           </div>
-            -->
             <div class="col-md-12">
                   <div class="row">
                        <div class="col-md-12 col-sm-12 col-12" style="display: flex;justify-content: center; align-items: center;">
-                           <select  name='appliance[]' class="form-control" style="margin-right: 10px;" required>
+                           <select name='appliance[]' class="form-control" style="margin-right: 10px;" required>
                                   <option value="" disabled selected>Appliance</option>
                                   <option value="AC" >AC</option>
                                   <option value="Washing Machine" >Washing Machine</option>
@@ -131,10 +130,7 @@
            </div>
            <div class="input-wrape col-md-12">
                <button type="submit" class="btn btn-primary registernow" name="registernow" id="submit" style="background: #aa0000;border: none !important;border-radius: 0px !important">Register Now <i class="fa fa-angle-right"></i></button><br><br>
-               
            </div>
-          
-         
      </div>
      </form>
   </div>

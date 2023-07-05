@@ -97,12 +97,21 @@ div#call a {
 }
 </style>
 <?php
- $data=file_get_contents('parts/shops.json');
+ $data=file_get_contents('database/shops.json');
  $arr=json_decode($data,true);
 		    
- $category_data=file_get_contents('parts/category.json');
+ $category_data=file_get_contents('database/category.json');
  $category_arr=json_decode($category_data,true);
 ?>
+<section class="head1">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="shopprofile">
+                <img style="float:right;" src="" height="100px" width="100px"/>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="head">
     <div class="container">
         <h4 class="text-center text-red" style="font-size: 25px;padding-top: 20px;color: #aa0000 !important;border-bottom: 1px solid;padding-bottom: 10px;"><span>Stores/Shops Near You</span></h4>
@@ -125,27 +134,28 @@ div#call a {
 		   
 		    for($i=0;$i<count($arr);$i++){
 		       		    ?>
-		<div class="col-md-5 listing-block all <?php echo $arr[$i]['category']; ?>">
-		   <div class="img"><img class="d-flex align-self-start" src="parts/<?php echo $arr[$i]['img'];?>" alt="<?php echo $arr[$i]['title'];?>" style="width:100%"></div>
-		   <div class="content">
-		       <p id="title"><i class="fa fa-circle"></i>  <?php echo $arr[$i]['title'];?></p>
-		       <p id="cat"><i class="fa fa-tag"></i>  <?php 
-		       
-		        for($j=0;$j<count($category_arr);$j++){
-		            if($category_arr[$j]['id']==$arr[$i]['category']){
-		             echo $category_arr[$j]['title'] ;     
-		            }
-		        }
-		       ?></p>
-		       <p id="pay"><i class="fa fa-qrcode"></i> Scan and Pay Via OCSA using OCSA QRCODE</p>
-		   </div>
-		   <div id="call">
-		       <a href="tel:<?php echo $arr[$i]['mobile']; ?>"><i class="fa fa-phone"></i></a>
-		       <a href="#"><i class="fa fa-qrcode"></i></a>
-		   </div>
-           
-		</div>
-		 <?php
+    		<div class="col-md-5 listing-block all <?php echo $arr[$i]['category']; ?>">
+    		   <div class="img"><img class="d-flex align-self-start" id="image" src="images/OcsaQR.png" alt="<?php echo $arr[$i]['title'];?>" style="width:100%"></div>
+    		   <div class="content">
+    		       <p id="title"><i class="fa fa-circle"></i>  
+                    <?php echo $arr[$i]['title'];?></p>
+    		       <p id="cat"><i class="fa fa-tag"></i>  <?php 
+    		       
+    		        for($j=0;$j<count($category_arr);$j++){
+    		            if($category_arr[$j]['id']==$arr[$i]['category']){
+    		             echo $category_arr[$j]['title'] ;     
+    		            }
+    		        }
+    		       ?></p>
+    		       <p id="pay"><i class="fa fa-qrcode"></i> Scan and Pay Via OCSA using OCSA QRCODE</p>
+    		   </div>
+    		   <div id="call">
+    		       <a href="tel:<?php echo $arr[$i]['mobile']; ?>"><i class="fa fa-phone"></i></a>
+    		       <a href="#"><i class="fa fa-qrcode"></i></a>
+    		   </div>
+               <button id="print" >Print QR</button>
+    		</div>
+		  <?php
 		    }
             ?>
 	
@@ -153,7 +163,35 @@ div#call a {
 </div>
 </section>
 <script>
-    
+const printBtn = document.getElementById('print');
+
+printBtn.addEventListener('click', function() {
+iframe.contentWindow.print();
+});
+const iframe = document.createElement('iframe');
+// Make it hidden
+iframe.style.height = 0;
+iframe.style.visibility = 'hidden';
+iframe.style.width = 0;
+
+// Set the iframe's source
+iframe.setAttribute('srcdoc', '<html><body></body></html>');
+
+document.body.appendChild(iframe);
+iframe.addEventListener('load', function () {
+    // Clone the image
+    const image = document.getElementById('image').cloneNode();
+    image.style.maxWidth = '100%';
+
+    // Append the image to the iframe's body
+    const body = iframe.contentDocument.body;
+    body.style.textAlign = 'center';
+    body.appendChild(image);
+        // Invoke the print when the image is ready
+        
+});
+
+
 //   show category wise store and shops
  $(document).on('click','button#showcat',(function(e) {
     var id=$(this).data('id');

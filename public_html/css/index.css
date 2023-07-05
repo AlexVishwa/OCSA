@@ -69,7 +69,7 @@ header nav ul li a {
 } 
 header nav ul li:hover a{
     text-decoration: none;
-    color: red;
+    color: yellow;
 }
 header nav ul li:hover::after{
     content: '';
@@ -143,7 +143,7 @@ div#herobox {
 }
 div#herobox h3 {
     font-size: -webkit-xxx-large;
-    color: red;
+    color: yellow;
 }
 
 div#herobox p {
@@ -233,7 +233,7 @@ div#sidebarmenu{
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 20px;
-    background: #ffffff85;
+    background: #ffffff 85;
     padding: 20px 0px;
 }
 
@@ -294,7 +294,7 @@ div#sidebarmenu{
     }
     div#herobox h3 {
         font-size: 18px;
-        color: red;
+        color: yellow;
         font-weight: 600;
     }
     div#herobox input {
@@ -307,7 +307,7 @@ div#sidebarmenu{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1px;
-        background: #f4f4f426;
+        background: #f4f4f4 26;
         padding: 0px;
     }
     
@@ -377,7 +377,7 @@ ul.footer-menu {
 
 ul.footer-menu li a {
     font-size: 18px;
-    color: #ffffffa8;
+    color: #ffffff;
    /* -webkit-text-stroke-color: #000;
     -webkit-text-stroke-width: thin;
     font-weight: 800;*/
@@ -389,17 +389,17 @@ ul.footer-menu li:hover {
 
 ul.footer-menu li {
     transition: 0.4s;
-    border-bottom: 1px solid #e9ecef1f;
+    border-bottom: 1px solid #ffffff;
     padding: 5px 0px;
 }
 
 ul.footer-menu li:hover a {
     text-decoration: none;
-    color: #ff0000;
+    color: #ffffff;
 }
 .intro{
         font-size: 17px;
-    color: #d2d2d2;
+    color: #ffffff;
     text-align: justify;
 }
 .quick_links{
@@ -584,7 +584,7 @@ div#sidemenu_wrapper nav ul li {
 
 div#sidemenu_wrapper nav ul li a {
     font-size: 17px;
-    color: red;
+    color: yellow;
 }
 
 div#sidemenu_wrapper nav ul li ul {

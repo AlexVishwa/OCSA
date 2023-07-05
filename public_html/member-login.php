@@ -3,8 +3,8 @@ include_once('header.php');
 ?>
 <style type="text/css">
 	input,button{
-	border: 0.1px solid #aa0000 !important;
-    color: #aa0000 !important;
+	border: 0.1px solid yellow !important;
+    color: black !important;
     border-radius: 0px !important;
 	}
   #submit_otp,#fotp{
@@ -44,14 +44,14 @@ include_once('header.php');
 <div class="container-fluid" style="display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 20px 0px;background: #ffffffab;">
 	<h2 style="border-bottom: 1px solid;padding-bottom: 5px;color: #aa0000;font-weight: bold;">Member Login</h2>
 
-	<form action="member_auth.php" id="member_auth" method="post" style="width: 300px;padding: 30px 5px;">
+	<form id="member_auth" method="post" style="width: 300px;padding: 30px 5px;">
 	  <div class="form-group">
-	    <label for="email">Mobile Number:</label>
-	    <input type="number" class="form-control" id="mobile" required="required">
+	    <label for="mobile">Mobile Number:</label>
+	    <input type="number" class="form-control" id="mobile" required>
 	  </div>
 	  <div class="form-group">
 	    <label for="pwd">Password:</label>
-	    <input type="password" class="form-control" id="pwd" required="required">
+	    <input type="password" class="form-control" id="pwd" required>
 	  </div>
 	 
 	  <button type="submit" class="btn btn-primary" id="mlogin" style="background: #aa0000;color: #fff !important;">LOGIN</button><br>

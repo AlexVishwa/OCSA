@@ -1,0 +1,6 @@
+.shopprofile{
+	border: solid 1px;
+	border-color: black;
+	background-image: "url: images/profile.jpg";
+	float: right;
+}

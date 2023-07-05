@@ -6,12 +6,12 @@
     background: #ffffff85;
 }
 .contactus input, .contactus textarea, .contactus select {
-    border: 1px solid #aa0000;
+    border: 1px solid yellow;
     margin: 10px 0px;
     border-radius: 0px !important ;
 }
 .contactus button{
-	 border: 1px solid #aa0000;
+	border: 1px solid #aa0000;
 	padding: 4px 25px;
     background: #aa0000;
     color: #fff;
