@@ -7,9 +7,11 @@
         for($i=0;$i<count($services2);$i++){
         ?>
         <a href="booking.php?id=<?php echo $services2[$i]['id']; ?>" id="wrapper">
+            
             <div id="img">
                 <img src="<?php echo $services2[$i]['img']; ?>" alt="">
             </div>
+            
             <div id="title">
               <p>
                 <span class="text-success" style="font-size: 20px;font-weight: 900;">&#8377; <?php echo $services2[$i]['offer']; ?></span>

@@ -4,3 +4,11 @@
 	background-image: "url: images/profile.jpg";
 	float: right;
 }
+
+#map{
+	height:200px;
+}
+
+.material-symbols-outlined{
+	color: gold;
+}

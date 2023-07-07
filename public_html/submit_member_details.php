@@ -2,7 +2,8 @@
 header('Access-Control-Allow-Headers:*');
 header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
 header('Access-Control-Allow-Credentials: true');
-header('Access-Control-Max-Age: 86400'); 
+header('Access-Control-Max-Age: 86400');
+include_once('functions.php'); 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -13,12 +14,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     if (!$conn) {
     die("Connection failed: " . $conn->connect_error());
     }
-    $id=time();/*
+    $id=time();
+    $check_mobile=checkMobile2($_POST[mobile]);
+    //echo $check_mobile;
+    
+    if($check_mobile =='true'){
+        $item->msg="failure";
+     echo json_encode($item);
+    }
+    else{     
+    /*
     $wallet_arr[]=array('id'=>$id,'name'=>$_POST['name'],'mobile'=>$_POST['mobile'],'email'=>$_POST['email'],'referral'=>$_POST['referral'],'wallet'=>0);
     $arr[]=array('id'=>$id,'name'=>$_POST['name'],'email'=>$_POST['email'],'mobile'=>$_POST['mobile'],'password'=>$_POST['password'],'address'=>$_POST['address'],'city'=>$_POST['city'],'pincode'=>$_POST['pincode'],'appliance'=>$_POST['appliance'],'quantity'=>$_POST['quantity'],'created'=>date('d-M-Y H:s:i A'),'main_wallet'=>0,'wallet'=>0,'paid_amount'=>0,'membership'=>0,'month_available'=>0,'referral'=>$_POST['referral'],'active'=>0);
+    
     */
     $sql3="Insert into wallet(id,name,email,mobile,referral,walletbalance,paid_amount) Values('$id','$_POST[name]','$_POST[email]','$_POST[mobile]','','0','0');";
-    $sql4="Insert into member(id,name,email,password,mobile,address,city,pincode,main_wallet,wallet,paid_amount,months_available,membership,referralid,active,type) Values('$id','$_POST[name]','$_POST[email]','$_POST[password]','$_POST[mobile]','$_POST[address]','$_POST[city]','$_POST[pincode]','0','0','0','0','0','$_POST[referral]','0','unpaid');";
+    $sql4="Insert into member(id,name,email,password,mobile,address,city,pincode,main_wallet,wallet,paid_amount,months_available,membership,referralid,active,type) Values('$id','$_POST[name]','$_POST[email]','$_POST[password]','$_POST[mobile]','$_POST[address]','$_POST[city]','$_POST[pincode]','0','0','0','0','0','$_POST[referral]','1','unpaid');";
         $conn->query($sql3);
         $result=$conn->query($sql4);
         /*
@@ -45,10 +56,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         array_push($arr['data'],"Error".$conn->error)
         echo json_encode($arr);   
         }
-        */
-        header("Location: http://localhost/serv/public_html/member-login.php");
         
+        */
+        $item->msg="success";
+        echo json_encode($item);
+        //header("Location: http://localhost/serv/public_html/member-login.php");
+        }
     //sendOtp($_POST['mobile'],'Thank You '.$_POST['name'].' registered with us. Your username= '.$_POST['mobile'].' & password='.$_POST['password'].'. for contact: Mail Us:contact@ocsa.in');
+    //echo json_encode("{\"msg\":\"failure\"}");
     
 }
 ?>

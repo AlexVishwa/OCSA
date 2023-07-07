@@ -106,9 +106,9 @@ div#call a {
 <section class="head1">
     <div class="container">
         <div class="container-fluid">
-            <div class="shopprofile">
-                <img style="float:right;" src="" height="100px" width="100px"/>
-            </div>
+            
+
+                    
         </div>
     </div>
 </section>
@@ -135,11 +135,15 @@ div#call a {
 		    for($i=0;$i<count($arr);$i++){
 		       		    ?>
     		<div class="col-md-5 listing-block all <?php echo $arr[$i]['category']; ?>">
-    		   <div class="img"><img class="d-flex align-self-start" id="image" src="images/OcsaQR.png" alt="<?php echo $arr[$i]['title'];?>" style="width:100%"></div>
+    		   <div class="shopprofile"><!-- img class --><img class="d-flex align-self-start" id="image" src="images/OcsaQR.png" alt="<?php echo $arr[$i]['title'];?>" height="200px" width="200px" style="width:100%">
+               </div>
     		   <div class="content">
     		       <p id="title"><i class="fa fa-circle"></i>  
-                    <?php echo $arr[$i]['title'];?></p>
-    		       <p id="cat"><i class="fa fa-tag"></i>  <?php 
+                    <?php echo $arr[$i]['title'];?>Shop1<span class="material-symbols-outlined" style="color:navyblue;">
+                    verified
+                    </span></p>
+    		       <p id="cat"><i class="fa fa-tag"></i>Books 
+                    <?php 
     		       
     		        for($j=0;$j<count($category_arr);$j++){
     		            if($category_arr[$j]['id']==$arr[$i]['category']){
@@ -147,6 +151,17 @@ div#call a {
     		            }
     		        }
     		       ?></p>
+                   <div id="map"><p>Location:</p></div>
+                   <div id="reviews">
+                    <?php for($j=0;$j<=floor($arr[$i]['rating']);$j++)
+                    {?>
+                    <span class="material-symbols-outlined">
+                        star
+                    </span>
+                    <?php }?>
+                    
+                   </p>
+                   <p id="aboutme"></p>
     		       <p id="pay"><i class="fa fa-qrcode"></i> Scan and Pay Via OCSA using OCSA QRCODE</p>
     		   </div>
     		   <div id="call">
@@ -162,7 +177,36 @@ div#call a {
 	</div>
 </div>
 </section>
+<script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "beta"});</script>
 <script>
+let map;
+
+async function initMap() {
+  // The location of Uluru
+  const position = { lat: -25.344, lng: 131.031 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map"), {
+    zoom: 4,
+    center: position,
+    mapId: "DEMO_MAP_ID",
+  });
+
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: position,
+    title: "Uluru",
+  });
+}
+
+
+initMap();
 const printBtn = document.getElementById('print');
 
 printBtn.addEventListener('click', function() {

@@ -224,8 +224,15 @@ $("button.registernow").on('click',function(e){
                         $.post('submit_member_details.php',{name,email,mobile,password,city,pincode,address,appliance,quantity},function(callback){
                            console.log(callback); 
                            modal.style.display = "none";
-                           swal("Your Registration Successfully Done !");
-                           window.location.href="http://localhost/serv/public_html/index.php";
+                           //swal("Your Registration Successfully Done !");
+                           var resp=JSON.parse(callback);
+                           if (resp.msg=='success'){
+                            swal("Your Registration Successfully Done !");
+                           }
+                           else{
+                            swal("Phone number is already registered !");
+                           }
+                           //window.location.href="http://localhost/serv/public_html/index.php";
                         });
                     }else{
                         $("p#verifymsg").html('<span  style="color:red;font-size:12px">Invalid OTP</span>');
