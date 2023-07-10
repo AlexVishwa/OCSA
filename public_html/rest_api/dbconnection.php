@@ -8,9 +8,9 @@ private $pass;
 function __construct(){
     try {
        $this->host='localhost';
-        $this->dbname='users';
-        $this->user='ocsa';
-        $this->pass='ocsa@123';
+        $this->dbname='Ocsa';
+        $this->user='root';
+        $this->pass='Slxv721()';
         $this->db = new PDO("mysql:host=$this->host;dbname=$this->dbname",$this->user,$this->pass);
         $this->db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         return $this->db;

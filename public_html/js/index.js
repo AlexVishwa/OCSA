@@ -157,7 +157,8 @@ var modal = document.getElementById('id01');
 // }
 // registration form
 $("button.registernow").on('click',function(e){
-    e.preventDefault();
+
+            e.preventDefault();
          var name=$("#membername").val();
          var email=$("#email").val();
          var mobile=$("#mobile").val();
@@ -209,7 +210,12 @@ $("button.registernow").on('click',function(e){
             ?>
             */
             
-            $.post('mobile_registration.php',{mobile,email},function(data){
+            $.get('http://localhost/serv/public_html/rest_api/checkMobile.php',{mobile,email},function(data){
+                console.log(data.data);
+                if(data.data[0].status=='Success')
+                {
+
+                $.post('mobile_registration.php',{mobile,email},function(data){
                 var modal = document.getElementById('id01');        
                 modal.style.display = "block";
                 
@@ -243,8 +249,14 @@ $("button.registernow").on('click',function(e){
             });
                 
         }
-});
+        else{
+            swal("Phone number already exists !");
+        }
+    });
+    }
 
+
+});
 
 // member login function
 $('button#mlogin').on('click',function(e){

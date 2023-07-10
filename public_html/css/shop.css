@@ -12,3 +12,22 @@
 .material-symbols-outlined{
 	color: gold;
 }
+
+.middle{
+	text-align: center;
+	font-size: bold;
+	font-weight: 600;
+	align-content: center;
+	font-family: "Times New Roman"
+}
+
+.profilePic{
+	float: left;
+	margin-top:10px;
+	height:200px;
+	width: 200px;
+
+}
+
+.editicon{
+}

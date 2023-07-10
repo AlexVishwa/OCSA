@@ -1,7 +1,20 @@
 <?php
 include_once("dbconnection.php");
 class Api extends Dbconnection {
-    
+    function checkMob($mobile){
+        $result=$conn->query("Select * from member where mobile='$_GET[mobile]';");
+        $response=array();
+        if(count($result) > 0)
+        {
+            array_push($response,array('status'=>"Failure","status_code"=>200,"msg"=>"Phone number already registered"));
+        }
+        else
+        {
+            array_push($response,array('status'=>"Success","status_code"=>200,"msg"=>"Registration successful"));   
+        }
+        echo json_encode($response);
+
+    }
     function insert($table,$data=array()){
     
     $column = implode(", ",array_keys($data));
