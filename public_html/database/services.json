@@ -1,0 +1,659 @@
+[
+{
+	"id":1,
+	"img":"./images/ac.jpeg",
+	"options":[
+      {
+      	"service_type":"Installation",
+             "description":"",
+            "type":[
+               {
+                  "item":"Window  AC",
+                  "price":499
+               },
+               {
+                  "item":"Split AC",
+                  "price":2000
+               }
+            ]
+      },
+      {
+
+            "service_type":"Un Installation",
+             "description":"",
+            "type":[
+               {
+                  "item":"Window  AC",
+                  "price":398
+               },
+               {
+                  "item":"Split  AC",
+                  "price":599
+               }
+            ]
+      },
+      {
+
+            "service_type":"Gas Filling",
+             "description":"",
+            "type":[
+               {
+                  "item":"Window  AC",
+                  "price":1999
+               },
+               {
+                  "item":"Split  AC",
+                  "price":2499
+               }
+            ]
+      },
+      {
+            "service_type":"Repairing/Not Cooling",
+             "description":"I.   LESS/NO COOLING<br>II.   A.C. NOT STARTING<br>III.  NOISE ISSUE<br>IV.   WATER LEAKAGE",
+            "type":[
+               {
+                  "item":"Window  AC",
+                  "price":599
+               },
+               {
+                  "item":"Split  AC",
+                  "price":599
+               }
+            ]
+      },
+      {
+            "service_type":"AC Servicing ",
+             "description":"",
+            "type":[
+               {
+                  "item":"Window AC",
+                  "price":499
+               },
+               {
+                  "item":"Split AC",
+                  "price":599
+               }
+            ]
+      }
+	],
+	"title":"Air Conditioner ",
+      "note":""
+    
+},
+{
+	"id":2,
+	"img":"./images/sound_system.png",
+	"options":[
+      {
+         "service_type":"REPAIR",
+         "type":[
+            {
+               "item":"NO VOICE",
+               "price":249
+            },
+            {
+               "item":"NOT WORKING",
+               "price":249
+            },
+            {
+               "item":"OTHER ISSUES",
+               "price":249
+            }
+         ]
+      }
+   ],
+	"title":"Home Theater & Sound System "
+    
+},
+{
+	"id":3,
+	"img":"./images/mobile.png",
+	"options":[],
+	"title":"Mobile "
+    
+},
+{
+	"id":4,
+	"img":"./images/cooler.png",
+	"options":[
+       {
+            "service_type":"REPAIR/",
+            "type":[
+               {
+                  "item":"SLOW SPEED",
+                  "price":149
+               },
+               {
+                  "item":"NOT WORKING",
+                  "price":149
+               },
+               {
+                  "item":"NOISE",
+                  "price":149
+               },
+               {
+                  "item":"OTHER ISSUES",
+                  "price":149
+               }
+            ]
+      },
+      {
+         "service_type":"INSTALLATION/ UNINSTALLATION",
+         "type":[
+            {
+               "item":"INSTALLATION/ UNINSTALLATION",
+               "price":299
+            }
+         ]
+      },
+      {
+         "service_type":"REWINDING",
+         "type":[
+            {
+               "item":"EXHUST FAN ",
+               "price":599
+            },
+            {
+               "item":"KIT/ONE 10 FAN",
+               "price":499
+            }
+         ]
+      }
+
+   ],
+	"title":"Cooler Service"
+    
+},
+{
+	"id":5,
+	"img":"./images/fan.png",
+	"options":[
+      {
+            "service_type":"REPAIRING",
+            "type":[
+               {
+                  "item":"SLOW SPEED",
+                  "price":99
+               },
+               {
+                  "item":"NOT WORKING",
+                  "price":99
+               },
+               {
+                  "item":"NOISE",
+                  "price":99
+               },
+               {
+                  "item":"OTHER ISSUES",
+                  "price":99
+               }
+            ]
+      },{
+            "service_type":"INSTALLATION/ UNINSTALLATION ",
+            "type":[
+               {
+                  "item":"INSTALLATION/ UNINSTALLATION ",
+                  "price":299
+               }
+            ]
+      },{
+            "service_type":"REWINDING",
+            "type":[
+              
+               {
+                  "item":"REWINDING",
+                  "price":499
+               }
+            ]
+      }
+
+      ],
+	"title":"Fan  ",
+      "note":"REPAIR CARD PROVIDED AFTER INSPECTION.<br><br><b>DIAGNOSIS/LABOUR CHARGE =Rs. 100/-</b><br>(i)      SPARE PARTS AND SERVICING CHARGES AS PER RATE CARD.<br>(ii) NO ADDITIONAL LABOUR CHARGE."
+    
+},
+{
+	"id":6,
+	"img":"./images/ipad.png",
+	"options":[ ],
+	"title":"Iphone/Mac "
+    
+},
+{
+	"id":7,
+	"img":"./images/inverter.png",
+	"options":[ 
+      {
+            "service_type":"",
+            "type":[
+              
+               {
+                  "item":"",
+                  "price":249
+               }
+            ]
+      },{
+            "service_type":"REPAIR(DIAGNOSIS/LABOUR CHARGE)",
+            "type":[
+              
+               {
+                  "item":"REPAIR(DIAGNOSIS/LABOUR CHARGE)",
+                  "price":349
+               }
+            ]
+      },
+      {
+            "service_type":"INSTALLATION/FITTING",
+            "type":[
+              
+               {
+                  "item":"INSTALLATION/FITTING",
+                  "price":499
+               }
+            ]
+      },
+      {
+            "service_type":"UNISTALLATION",
+            "type":[
+              
+               {
+                  "item":"UNISTALLATION",
+                  "price":399
+               }
+            ]
+      }
+    ],
+	"title":"Inverter/Battery "
+    
+},
+{
+	"id":8,
+	"img":"./images/chimney.png",
+	"options":[
+      {
+            "service_type":"INSTALLATION",
+            "description":"(i)INSTALLATION OF CHIMNEY UNIT.(ii)COMPLETE PERFORMANCE CHECK POST INSTALLATION.",
+            "type":[
+               {
+                  "item":"BASIC CHIMNEY",
+                  "price":499,
+                  "note":""
+               },
+               {
+                  "item":"ISLAD CHIMNEY",
+                  "price":1499,
+                  "note":""
+               }
+            ]
+      },
+      {
+            "service_type":"UNINSTALLATION",
+            "description":"COMPLETE CHECK BEFORE UNINSTALLED.<br>REMOVAL AND UNINSTALLATION OF UNIT.",
+            "type":[
+               {
+                  "item":"BASIC CHIMNEY",
+                  "price":499,
+                  "note":""
+               },
+               {
+                  "item":"ISLAD CHIMNEY",
+                  "price":799,
+                  "note":""
+               }
+            ]
+      }
+      ],
+	"title":"Chimney ",
+      "note":"(i) CLEANING OF OUTER SURFACE OF THE MESH & INSIDE SURFACE  OF THE MESH WITH CLEANING SOLUTIONS TO WIPE THE OIL.<br>(ii)  CHIMNEY WILL BE DISMANTLED & EVERY PART WILL BE CLEANED BY CLEANING SOLUTION & WILL BE INSTALLED BACK BY THE PROFESSIONAL."
+    
+},
+{
+	"id":9,
+	"img":"./images/refrigerator.png",
+	"options":[
+      {
+            "service_type":"SERVICE/REPAIR",
+            "description":"",
+            "type":[
+               {
+                  "item":"DIAGNOSIS/LABOUR CHARGE",
+                  "price":249
+               },
+               {
+                  "item":"No/LESS COOLING",
+                  "price":249
+               },{
+                  "item":"WATER LEACKAGE",
+                  "price":249
+               },{
+                  "item":"ICE FORMATION",
+                  "price":249
+               },{
+                  "item":"OTHER ISSUES",
+                  "price":249
+               }
+            ]
+      },{
+            "service_type":"Gas Filling",
+            "description":"",
+            "type":[
+               {
+                  "item":"165 LIT. REFREGERATOR ",
+                  "price":999
+               },
+               {
+                  "item":"210 LIT. REFREGERATOR ",
+                  "price":1099
+               },{
+                  "item":"250 LIT. REFREGERATOR",
+                  "price":1199
+               },{
+                  "item":"300 LIT. REFREGERATOR",
+                  "price":1299
+               },{
+                  "item":"ABOVE 300 LIT. REFREGERATOR  ",
+                  "price":1499
+               }
+            ]
+      }
+      ],
+	"title":"Refrigerator "
+    
+},
+{
+	"id":10,
+	"img":"./images/mixi.png",
+	"options":[
+      {
+            "service_type":"REPAIRING",
+            "type":[
+               {
+                  "item":"REPAIR",
+                  "price":149,
+                  "note":"(i) REPAIR & SPARE CHARGES WILL BE APPLICABLE IF YOU DECIDED TO GO AHEAD WITH THE .<br>(ii) MOTOR WINDING JOBS WILL NOT BE COMPLETED BY THE PROFESSIONAL AT THE CUSTOMER SITE THE PROFESSIONAL CAN ONLY DETACH THE SPARE PARTS FROM THE MIXER GRINDER<br><br><b>PRICEING & TERMS</b><br>UP TO 30 MINUTES OF = <b>Rs. 149/-</b><br>31 TO 60 MINUTES OF  = <b>Rs. 249/-</b><br>61 TO 90 MINUTES OF = <b>Rs. 349/-</b><br>EVERY ADDITIONAL 30 MINUTES OF  = <b>Rs. 100/-</b><br>Rs. 149/-  INSPECTION/QUOTATION FEES IS APPLICABLE IF SERVICE IS  NOT AVAILED.<br><br><b>ADDITIONAL COST :-</b><br>Rs. 100/- CONVAIENCE FEES FOR MATERIAL PRO CURE MENT.<br>Rs. 100/- FOR EVERY 60 MINUTES FOR HELPER (IF REQURED FOR COMPLEX WORK)."
+               }
+            ]
+      }
+      ],
+	"title":"Mixi/Grinder "
+    
+},
+{
+	"id":11,
+	"img":"./images/iron.png",
+	"options":[
+      {
+            "service_type":"REPAIRING",
+            "type":[
+               {
+                  "item":"NOT HEATING",
+                  "price":99
+               },
+               {
+                  "item":"NOT WORKING",
+                  "price":99
+               },
+               {
+                  "item":"AUTO CUT IS NOT FUNCTIONED",
+                  "price":99
+               },
+               {
+                  "item":"OTHER ISSUES",
+                  "price":99
+               }
+            ]
+      }
+      ],
+	"title":"Iron ",
+      "note":"REPAIR CARD PROVIDED AFTER INSPECTION.<br><br<b>DIAGNOSIS/LABOUR CHARGE =Rs. 100/-</b><br>"
+    
+},
+{
+	"id":12,
+	"img":"./images/laptop.png",
+	"options":[ ],
+	"title":"Laptop/Computer "
+    
+},
+{
+	"id":13,
+	"img":"./images/microwave.png",
+	"options":[
+      {
+            "service_type":"SERVICE/REPAIR",
+            "description":"",
+            "type":[
+               {
+                  "item":"DIAGNOSIS/LABOUR CHARGE",
+                  "price":249
+               },
+               {
+                  "item":"NOT HEATING",
+                  "price":249
+               },
+               {
+                  "item":"NOISE",
+                  "price":249
+               },
+               {
+                  "item":"ICE FORMATION",
+                  "price":249
+               },
+               {
+                  "item":"OTHER ISSUES",
+                  "price":249
+               }
+            ]
+      }
+      ],
+	"title":"Microwave Oven "
+    
+},
+{
+	"id":14,
+	"img":"./images/ro.png",
+	"options":[
+      {
+            "service_type":"INSTALLATION/FITTING",
+            "type":[
+               {
+                  "item":"INSTALLATION",
+                  "price":399
+               },
+               {
+                  "item":"UNINSTALLATION",
+                  "price":300
+               },
+               {
+                  "item":"INSTALLATION+UNINSTALLATION",
+                  "price":549,
+                  "note":"INSTALLATION/UNINSTALLATION TO BE CARRIED OUT WITH IN THE SAME ADDRESS."
+               }
+            ]
+      },{
+            "service_type":"REPAIR",
+            "type":[
+               {
+                  "item":"REPAIR",
+                  "price":249,
+                  "note":"(i) Rs. 249/- INCLUDES FIXED INSPECTION CHARGES & WILL BE ADJUSTED AGAINST THE FINAL BILL.<br>(ii)      FINAL QUOTATION WILL BE GIVEN AFTER THE INSPECTION."
+               }
+            ]
+      },{
+            "service_type":"SERVICING / FILTER CHANGE",
+            "type":[
+               {
+                  "item":"SERVICING / FILTER CHANGE",
+                  "price":299,
+                  "note":"(i) CLEANING OF MACHINE AND ALL FILTERS.<br>(ii) (ii)FILTER CHANGE COST EXTRA. PRICES AS PER RATE CARD."
+               }
+            ]
+      }
+      ],
+	"title":"REVARSES OSMOSIS (RO)"
+    
+},
+{
+	"id":15,
+	"img":"./images/gas.png",
+	"options":[ ],
+	"title":"Gas Stove(Chulha) "
+    
+},
+{
+	"id":16,
+	"img":"./images/washing.png",
+	"options":[
+      {
+            "service_type":"Installation/Unistallation",
+             "description":"",
+            "type":[
+               {
+                  "item":"FRONT LOADING",
+                  "price":399
+               },
+               {
+                  "item":"TOP LOADING",
+                  "price":399
+               }
+            ]
+      },
+      {
+            "service_type":"DIAGNOSIS/LABOUR CHARGE",
+             "description":"",
+           "type":[
+               {
+                  "item":"FRONT LOADING",
+                  "price":249
+               },
+               {
+                  "item":"TOP LOADING",
+                  "price":249
+               }
+            ]
+      },
+      {
+            "service_type":"DESCALING",
+            "description":"<p>(i) IMPROVE THE QUALITY OF WASH AND EFFICIENCY OF THE   WASHING MACHINE.</p><p>(ii) COST OF ONE SACHET OF DESCALING POWDER WORTH Rs.     100/- USED IN THE SERVICE INCLUDED.</p><p>   (iii) REMOVING INNERLINE  SCALES IN THE WASHING MACHINE (USING DESCALING AGENTS).</p><p>   (iv) SERVICE TIME OF 20 MINUTES. </p>",
+           "type":[
+               {
+                  "item":"FRONT LOADING",
+                  "price":395
+               },
+               {
+                  "item":"TOP LOADING",
+                  "price":395
+               }
+            ]
+      }
+      ],
+	"title":"Washing Machine "
+    
+},
+{
+	"id":17,
+	"img":"./images/gyser.png",
+	"options":[
+      {
+            "service_type":"Installation/Unistallation",
+            "description":"",
+            "type":[
+               {
+                  "item":"ELECTRIC GEYSER",
+                  "price":499
+               },
+               {
+                  "item":"GAS GEYSER",
+                  "price":499
+               }
+            ]
+      },
+      {
+            "service_type":"Services",
+            "description":"",
+            "type":[
+               {
+                  "item":"ELECTRIC GEYSER ",
+                  "desc":"(<span style='font-size:7px'>SMALL (LESS THAN 15 LITER)</span>)",
+                  "price":450
+               },
+               {
+                  "item":"ELECTRIC GEYSER ",
+                  "desc":"(<span style='font-size:7px'>MEDIUM ( 15 TO 25 LITER)</span>)",
+                  "price":550
+               },{
+                  "item":"ELECTRIC GEYSER ",
+                  "desc":"(<span style='font-size:7px'>DON'T KNOW THE SIZE)",
+                  "price":550
+               }
+            ]
+      },
+      {
+            "service_type":"REPAIR",
+            "description":"",
+            "type":[
+               {
+                  "item":"NO POWER",
+                  "price":450
+               },
+               {
+                  "item":"WATER LEACKAGE",
+                  "price":550
+               },{
+                  "item":"NO HEATING",
+                  "price":550
+               },{
+                  "item":"OTHER ISSUES",
+                  "price":550
+               }
+            ]
+      }
+      ],
+	"title":"Geyser/Water Heater "
+    
+},
+{
+	"id":18,
+	"img":"./images/repair.png",
+	"options":[
+      {
+            "service_type":"REPAIR",
+            "type":[
+               {
+                  "item":"REPAIR ",
+                  "price":249,
+                  "note":"(i) VISITING / INSPECTION FEE<br>(ii) SPARE PART/REPAIR COST EXTRA<br>(iii) ADJUSTABLE AGAINST THE FINAL BILL."
+               }
+            ]
+      },
+      {
+            "service_type":"INSTALLATION",
+            "type":[
+               {
+                  "item":"UPTO 50 INCHES ",
+                  "price":499                  
+               },
+               {
+                  "item":"ABOVE 50 INCHES",
+                  "price":499                 
+               }
+            ]
+      },
+      {
+            "service_type":"UNINSTALLATION",
+            "type":[
+               {
+                  "item":"UPTO 50 INCHES ",
+                  "price":299                  
+               },
+               {
+                  "item":"ABOVE 50 INCHES",
+                  "price":399                 
+               }
+            ]
+      }
+      ],
+	"title":"LED/TV "
+    
+}
+]
